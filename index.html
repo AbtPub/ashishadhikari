@@ -35,6 +35,16 @@
       gap: 16px;
       flex-wrap: wrap;
     }
+
+    #animated-name {
+      font-weight: 700;
+      font-size: 36px;
+      letter-spacing: 2px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+    }
+
     nav a {
       color: var(--muted);
       text-decoration: none;
@@ -54,19 +64,6 @@
       background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
       border-radius: 12px;
       padding: 22px;
-    }
-
-    h1 {
-      font-size: 48px;
-      margin: 0 0 8px;
-      display: inline-block;
-      overflow: hidden;
-    }
-
-    .letter {
-      display: inline-block;
-      opacity: 0;
-      animation: fadeIn 0.5s forwards;
     }
 
     p.lead { color: var(--muted); margin: 0 0 18px; }
@@ -174,6 +171,13 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
+    .letter {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 0.5s forwards;
+    }
+
     @media (max-width: 900px) {
       .hero { grid-template-columns: 1fr; }
       .projects { grid-template-columns: 1fr; }
@@ -184,7 +188,7 @@
 <body>
   <div class="container">
     <header>
-      <div style="font-weight:700; font-size:32px; letter-spacing:2px">Ashish Adhikari</div>
+      <h1 id="animated-name"></h1>
       <nav>
         <a href="#projects">Projects</a>
         <a href="#about">About</a>
@@ -194,13 +198,15 @@
 
     <main class="hero">
       <div class="profile-photo">
-         <img src="https://raw.githubusercontent.com/AbtPub/ashishadhikari/main/48578.jpg" alt="Ashish Adhikari">
-
+        <img src="https://raw.githubusercontent.com/AbtPub/ashishadhikari/main/48578.jpg" alt="Ashish Adhikari">
       </div>
 
       <section class="card">
-        <h1 id="animated-name"></h1>
-        <p class="lead">I build polished web apps and delightful user experiences. I specialize in Flutter, JavaScript along with clean UI design. Below are some of my projects and how to reach me.</p>
+        <p class="lead">
+          I build polished web apps and delightful user experiences. 
+          I specialize in Flutter, JavaScript along with clean UI design. 
+          Below are some of my projects and how to reach me.
+        </p>
         <a class="cta" href="#contact">Get in touch</a>
 
         <div style="margin-top:18px">
@@ -241,8 +247,8 @@
 
       <div style="margin-top:14px">
         <h4 style="margin:0 0 8px">Contact</h4>
-        <div style="font-size:14px;color:var(--muted)">Email: 
-          <a href="mailto:acaashish08@gmail.com" style="color:inherit">acaashish08@gmail.com</a>
+        <div style="font-size:14px;color:var(--muted)">
+          Email: <a href="mailto:acaashish08@gmail.com" style="color:inherit">acaashish08@gmail.com</a>
         </div>
         <div style="margin-top:8px">
           <a class="cta" href="mailto:acaashish08@gmail.com?subject=Hi%20from%20portfolio">Email me</a>
