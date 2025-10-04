@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name — projects, skills and contact." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c5cff; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px; font-family:Inter,system-ui,Arial,sans-serif;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071025 0%, #071526 60%);color:#e6eef8;line-height:1.5}
+    .container{max-width:var(--maxw);margin:32px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4cc9f0);display:grid;place-items:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:32px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:12px;padding:22px}
+    h1{font-size:28px;margin:0 0 8px}
+    p.lead{color:var(--muted);margin:0 0 18px}
+    .cta{display:inline-block;padding:10px 16px;background:var(--accent);color:white;border-radius:10px;text-decoration:none;font-weight:700}
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;color:var(--muted);font-weight:600}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+    .project{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:14px;border-radius:10px}
+    .project h3{margin:0 0 8px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    footer{margin-top:40px;color:var(--muted);font-size:14px;text-align:center}
+    .contact-card{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+    .socials{display:flex;gap:10px}
+    .btn-ghost{padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted);text-decoration:none}
+    @media(max-width:900px){.hero{grid-template-columns:1fr;}.projects{grid-template-columns:1fr}.container{padding:16px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">YN</div>
+        <div>
+          <div style="font-weight:700">Your Name</div>
+          <div style="font-size:13px;color:var(--muted)">Full‑stack developer • Designer • Problem solver</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="hero">
+      <section class="card">
+        <h1>Hi — I’m Your Name.</h1>
+        <p class="lead">I build polished web apps and delightful user experiences. I specialize in JavaScript, Python, and clean UI design. Below are some of my projects and how to reach me.</p>
+        <a class="cta" href="#contact">Get in touch</a>
+
+        <div style="margin-top:18px">
+          <h4 style="margin:0 0 8px">Key skills</h4>
+          <div class="skills">
+            <div class="skill">React</div>
+            <div class="skill">Django</div>
+            <div class="skill">TypeScript</div>
+            <div class="skill">Tailwind</div>
+            <div class="skill">UI/UX</div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <h4 style="margin:0 0 8px">Featured projects</h4>
+          <div class="projects" id="projects">
+            <article class="project">
+              <h3>Project Alpha</h3>
+              <p>Single-page app that visualizes data in real time. Built with React + D3.</p>
+            </article>
+            <article class="project">
+              <h3>Portfolio CMS</h3>
+              <p>Headless CMS + static site generator for fast, secure sites with deploy previews.</p>
+            </article>
+          </div>
+        </div>
+
+      </section>
+
+      <aside style="width:100%">
+        <div class="card contact-card">
+          <h3 id="about">About me</h3>
+          <p style="margin:0;color:var(--muted)">I’m a developer based in Kathmandu. I love turning ideas into products — from concept to shipping. Outside work I enjoy photography and hiking.</p>
+
+          <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn-ghost" href="#" download="YourName_Resume.pdf">Download resume</a>
+            <a class="btn-ghost" href="https://github.com/your-username" target="_blank">GitHub</a>
+            <a class="btn-ghost" href="https://linkedin.com/in/your-username" target="_blank">LinkedIn</a>
+          </div>
+
+          <div style="margin-top:14px">
+            <h4 style="margin:0 0 8px">Contact</h4>
+            <div style="font-size:14px;color:var(--muted)">Email: <a href="mailto:you@example.com" style="color:inherit">you@example.com</a></div>
+            <div style="margin-top:8px">
+              <a class="cta" href="mailto:you@example.com?subject=Hi%20from%20portfolio">Email me</a>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px" class="card">
+          <h4 style="margin:0 0 8px">More projects</h4>
+          <p style="margin:0;color:var(--muted)">Add links to live demos, GitHub repos, case studies or short video walkthroughs.</p>
+        </div>
+      </aside>
+    </main>
+
+    <footer id="contact">
+      <p>Want customizations? I can change colors, fonts, add a blog, or convert this to React/Vue and make it GitHub Pages ready. — <strong>Your Name</strong></p>
+    </footer>
+  </div>
+</body>
+</html>
